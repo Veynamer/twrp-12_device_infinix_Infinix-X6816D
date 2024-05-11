@@ -16,7 +16,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/infinix/Infinix-X6816D/device.mk)
 
 PRODUCT_DEVICE := Infinix-X6816D
-PRODUCT_NAME := omni_Infinix-X6816D
+PRODUCT_NAME := twrp_X6816D
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix X6816D
 PRODUCT_MANUFACTURER := infinix

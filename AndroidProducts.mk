@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_Infinix-X6816D.mk
+    $(LOCAL_DIR)/twrp-X6816D.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_Infinix-X6816D-user \
-    omni_Infinix-X6816D-userdebug \
-    omni_Infinix-X6816D-eng
+    twrp_X6816D-user \
+    twrp_X6816D-userdebug \
+    twrp_X6816D-eng
