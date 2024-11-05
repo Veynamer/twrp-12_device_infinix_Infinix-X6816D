@@ -6,6 +6,10 @@
 #
 
 LOCAL_PATH := device/infinix/X6816D
+
+# Enable virtual A/B OTA
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -15,17 +19,29 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.1-impl \
+    android.hardware.boot@1.1-impl.recovery \
+    android.hardware.boot@1.1-service
+
+# SHIPPING API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+# VNDK API
+PRODUCT_TARGET_VNDK_VERSION := 31
 
 PRODUCT_PACKAGES += \
     bootctrl.ums512
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.ums512 \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.ums512.recovery \
+    bootctrl
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd \
+    android.hardware.fastboot@1.0-impl \
+    android.hardware.fastboot@1.0-impl.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
