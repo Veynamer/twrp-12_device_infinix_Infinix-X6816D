@@ -29,9 +29,6 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # VNDK API
 PRODUCT_TARGET_VNDK_VERSION := 31
 
-PRODUCT_PACKAGES += \
-    bootctrl.ums512
-
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.ums512 \
     bootctrl.ums512.recovery \
