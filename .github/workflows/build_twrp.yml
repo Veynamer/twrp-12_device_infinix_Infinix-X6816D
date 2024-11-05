@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/Veynamer/twrp-12_device_infinix_infinix_X6816D'
+        default: 'https://github.com/Veynamer/twrp-12_device_infinix_infinix-X6816D'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
